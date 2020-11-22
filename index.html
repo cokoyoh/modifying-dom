@@ -17,9 +17,23 @@
 </head>
 
 <body>
-  <div class="alert">
+  <!-- <div class="alert">
     <strong>Hi there!</strong> You've read an important message
-  </div>
+  </div> -->
+  <!-- Create div using js -->
+  <script>
+    // Create div
+    const div = document.createElement('div');
+
+    //  set it's class name
+    div.className = 'alert';
+
+    //fill it with content
+    div.innerHTML = `<strong>Hi there!!</strong> You've just read an important message`;
+
+    // make the div show in the page by apending it somewhere in the doument
+    document.body.append(div);
+  </script>
 </body>
 
 </html>
