@@ -40,7 +40,9 @@
     document.body.append(div);
 
     //other methods for modifying dom
-    ol.before('a string added before the ol');
+    // ol.before(`<p>Hello</p>`, document.createElement('hr'));
+    // ol.insertAdjacentHTML('beforeend', `<p>Hello!!</p>`);
+    ol.insertAdjacentHTML('beforebegin', `<p>Hello!!</p>`);
     ol.after('a string added after the ol node');
 
     const firstListItem = document.createElement('li');
@@ -50,6 +52,9 @@
     const lastListItem = document.createElement('li');
     lastListItem.innerHTML = 'appended list item';
     ol.append(lastListItem);
+
+    //node removal
+    setTimeout(() => div.remove() , 3000); //remove the message div after 3 seconds
   </script>
 </body>
 
