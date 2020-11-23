@@ -21,6 +21,11 @@
     <strong>Hi there!</strong> You've read an important message
   </div> -->
   <!-- Create div using js -->
+  <ol id="ol">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
   <script>
     // Create div
     const div = document.createElement('div');
@@ -33,6 +38,18 @@
 
     // make the div show in the page by apending it somewhere in the doument
     document.body.append(div);
+
+    //other methods for modifying dom
+    ol.before('a string added before the ol');
+    ol.after('a string added after the ol node');
+
+    const firstListItem = document.createElement('li');
+    firstListItem.innerHTML = 'prepended list item';
+    ol.prepend(firstListItem); // add the list item before the ordered list
+
+    const lastListItem = document.createElement('li');
+    lastListItem.innerHTML = 'appended list item';
+    ol.append(lastListItem);
   </script>
 </body>
 
